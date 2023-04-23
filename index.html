@@ -1,20 +1,48 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.mi.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisan=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/6d99978cad.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <title>14th of 20x20 Challenges</title>
+  </head>
 
-  <title>14th of 20x20 Challenges</title>
-  
-  <!-- font awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.mi.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisan==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
-</head>
- 
-<body>
-
-  <script src="script.js"></script>
-</body>
+  <body>
+    <main>
+      <div class="heading">
+        <div></div>
+        <div>
+          <h2>Memory Cards</h2>
+        </div>
+        <div>
+          <button><i class="fa fa-plus"></i>Add New Card</button>
+        </div>
+      </div>
+      <div class="main"></div>
+      <div class="footage">
+        <button class="arrow" id="back"><i class="fa-solid fa-arrow-left"></i></button>
+        <span class="arrow" id="card_number">1/2</span>
+        <button class="arrow" id="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </main>
+    <button class="clear" id="clear"><i class="fa-solid fa-trash"></i> Clear Cards</button>
+    <script src="script.js"></script>
+  </body>
 </html>

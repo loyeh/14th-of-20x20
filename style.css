@@ -1,11 +1,75 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
-body {
-    font-size: 15pt;
-    background-color: #555566;
-    height:100vh;
-    position: relative;
-} 
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main {
+  font-size: 15pt;
+  /* background-color: #555566; */
+  font-family: Arial, Helvetica, sans-serif;
+  width: fit-content;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  /* border: 1px dotted blue; */
+
+}
+.heading,.footage {
+  width: 500px;
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row;
+  /* border: 1px dotted brown; */
+  /* padding: 5px; */
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+.heading div:first-child {
+  width: 25%;
+}
+.heading div:nth-child(2) {
+  width: 50%;
+}
+.heading div:last-child{
+  width: 25%;
+}
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 4px;
+  padding:5px;
+  border: 1px solid gray;
+  font-size: 14px;
+  font-weight: bold;
+}
+.clear{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.clear i{
+  font-size: 18px;
+}
+.main{
+  height: 80%;
+  border: 1px dotted green;
+
+}
+.footage{
+  font-size: 18px;
+}
+.footage button{
+padding: 5px 10px;
+font-size: 20px;
+font-weight: bold;
+
+margin-inline: 10px;
+border: none;
+}
