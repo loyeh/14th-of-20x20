@@ -25,24 +25,58 @@
   </head>
 
   <body>
-    <main>
-      <div class="heading">
-        <div></div>
-        <div>
-          <h2>Memory Cards</h2>
+    <div class="first_page " id="first_page">
+      <main>
+        <div class="heading">
+          <div></div>
+          <div>
+            <h2>Memory Cards</h2>
+          </div>
+          <div>
+            <button onclick="addNew()"><i class="fa fa-plus" ></i>Add New Card</button>
+          </div>
         </div>
-        <div>
-          <button><i class="fa fa-plus"></i>Add New Card</button>
+        <div class="main"></div>
+        <div class="footage">
+          <button class="arrow" id="back">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <span class="arrow" id="card_number">1/2</span>
+          <button class="arrow" id="next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
-      </div>
-      <div class="main"></div>
-      <div class="footage">
-        <button class="arrow" id="back"><i class="fa-solid fa-arrow-left"></i></button>
-        <span class="arrow" id="card_number">1/2</span>
-        <button class="arrow" id="next"><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-    </main>
-    <button class="clear" id="clear"><i class="fa-solid fa-trash"></i> Clear Cards</button>
+      </main>
+      <button class="clear" id="clear">
+        <i class="fa-solid fa-trash"></i> Clear Cards
+      </button>
+    </div>
+    <div class="new_card hide">
+      <main>
+        <div class="heading">
+          <div></div>
+          <div>
+            <h2>Add New Card</h2>
+          </div>
+          <div class="close">
+            <button class="closeBtn"  onclick="close_new()"><i class="fa fa-close" onclick="close_new()"></i></button>
+          </div>
+        </div>
+        <div class="new main">
+          <div>Question</div>
+          <input type="text" name="question" id="question" placeholder="  Enter question ...">
+          <div>Answer</div>
+          <input type="text" name="answer" id="answer" placeholder="  Enter answer ...">
+        </div>
+        <div class="footage">
+          <button class="back" id="back" onclick="addCard()">
+            <i class="fa-solid fa-plus"></i>
+            Add Card
+          </button>
+          
+        </div>
+      </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

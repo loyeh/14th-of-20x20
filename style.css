@@ -73,3 +73,43 @@ font-weight: bold;
 margin-inline: 10px;
 border: none;
 }
+.first_page.hide,.new_card.hide{
+  display: none;
+}
+.first_page.show,.new_card.show{
+  display: flex;
+}
+.new_card{
+  width: 100vw;
+  height: 100vh;
+  background-color: #cce0fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.new div{
+  font-size: 14px;
+  align-self: flex-start;
+  margin: 10px;
+}
+.new input{
+padding: 10px 10px 20px 10px;
+}
+.back{
+  background-color: white;
+  border: 1px solid black !important;
+  padding: 10px !important;
+}
+.closeBtn{
+  border: none;
+  font-size: 18px;
+
+}
+.close{
+  text-align: left;
+}
