@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
 }
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: white;
 }
+
 main {
   font-size: 15pt;
   /* background-color: #555566; */
@@ -18,9 +20,9 @@ main {
   position: relative;
   text-align: center;
   /* border: 1px dotted blue; */
-
 }
-.heading,.footage {
+.heading,
+.footage {
   width: 500px;
   display: flex;
   white-space: nowrap;
@@ -37,79 +39,130 @@ main {
 .heading div:nth-child(2) {
   width: 50%;
 }
-.heading div:last-child{
+.heading div:last-child {
   width: 25%;
 }
-button{
+button {
   cursor: pointer;
   background-color: transparent;
   border-radius: 4px;
-  padding:5px;
+  padding: 5px;
   border: 1px solid gray;
   font-size: 14px;
   font-weight: bold;
 }
-.clear{
+.clear {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 10px;
+  left: 10px;
 }
-.clear i{
+.clear.small {
+  bottom: -200px;
+  left: -90px;
+}
+.clear i {
   font-size: 18px;
 }
-.main{
+.main {
   height: 80%;
-  border: 1px dotted green;
-
+  /* border: 1px dotted green; */
+  padding: 10px;
 }
-.footage{
+.footage {
   font-size: 18px;
 }
-.footage button{
-padding: 5px 10px;
-font-size: 20px;
-font-weight: bold;
+.footage button {
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
 
-margin-inline: 10px;
-border: none;
+  margin-inline: 10px;
+  border: none;
 }
-.first_page.hide,.new_card.hide{
+.first_page.hide,
+.new_card.hide {
   display: none;
 }
-.first_page.show,.new_card.show{
+.first_page.show,
+.new_card.show {
   display: flex;
 }
-.new_card{
+.new_card,
+.first_page {
   width: 100vw;
   height: 100vh;
-  background-color: #cce0fd;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.new{
+.new {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.new div{
+.new div {
   font-size: 14px;
   align-self: flex-start;
   margin: 10px;
 }
-.new input{
-padding: 10px 10px 20px 10px;
+.new form{
+  display: flex;
+  flex-direction: column;
 }
-.back{
+.new input {
+  padding: 10px 10px 20px 10px;
+}
+.add {
   background-color: white;
   border: 1px solid black !important;
   padding: 10px !important;
 }
-.closeBtn{
+.closeBtn {
   border: none;
   font-size: 18px;
+}
+.close {
+  text-align: left;
+}
+.card {
+  height: 100%;
+  box-shadow: 0px 0px 20px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* animation: flip 2s ease-in-out ; */
 
 }
-.close{
-  text-align: left;
+.card.annimated{
+  animation: flip 0.5s ease-in-out ;
+  /* animation-play-state: paused; */
+}
+@keyframes flip {
+  0%{transform: scaleY(1);}
+  50%{transform: scaleY(0);}
+  100%{transform: scaley(1);}
+}
+.card div:first-child {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  border: none;
+  font-size: 16px;
+  opacity: 0.3;
+  transition: 0.5s ease;
+}
+.card button:hover {
+  opacity: 1;
+}
+/* .front,.back{
+  display:block;
+  border: none;
+} */
+.back{
+  /* z-index: 1; */
+}
+.hide{
+  display: none;
 }
