@@ -32,6 +32,8 @@ main {
 	align-items: center;
 	justify-content: center;
 	height: 10%;
+  /* margin-inline: 400px; */
+
 }
 .heading div:first-child {
 	width: 25%;
@@ -66,10 +68,12 @@ button {
 .main {
 	height: 360px;
 	width: 540px;
-	border: 1px dotted green;
+	/* border: 1px dotted green; */
 	padding: 10px;
 	overflow: hidden;
+	padding-inline: 300px;
 	position: relative;
+	/* align-self: center; */
 }
 .card_container {
 	display: flex;
@@ -77,10 +81,11 @@ button {
 	position: absolute;
 	top: -5px;
 	left: 0;
-  transition: 1s ease-in-out;
+	transition: 1s ease;
 }
 .footage {
 	font-size: 18px;
+
 }
 .footage button {
 	padding: 5px 10px;
@@ -100,8 +105,8 @@ button {
 }
 .new_card,
 .first_page {
-	width: 100vw;
-	height: 100vh;
+	width: 99vw;
+	height: 99vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -145,8 +150,7 @@ button {
 	position: relative;
 	/* animation: flip 2s ease-in-out ; */
 	box-shadow: 0px 0px 20px gray;
-  transition: 1s ease-in-out;
-
+	transition: 1s ease-in-out;
 }
 .card.annimated {
 	animation: flip 0.5s ease-in-out;

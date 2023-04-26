@@ -21,12 +21,50 @@ class Card {
 	}
 }
 
+function previous() {
+	displaying_card_index--;
+	if (displaying_card_index < 0) {
+		displaying_card_index = cards.length - 1;
+	}
+	const card_container = document.querySelector(".card_container");
+	card_container.style.left = `${displaying_card_index * -540}px`;
+	const cardsArr = document.querySelectorAll(".card");
+	cardsArr.forEach((elem) => {
+		if (elem.dataset.number != (displaying_card_index+1)) {
+			elem.style.opacity = "0";
+		} else {
+			elem.style.opacity = 1;
+		}
+	});
+  card_number.innerText = `${displaying_card_index+1}/${cards.length}`;
+		makeCards(cards);
+}
+
+function next() {
+	displaying_card_index++;
+	if (displaying_card_index > cards.length -1) {
+		displaying_card_index = 0;
+	}
+	const card_container = document.querySelector(".card_container");
+	card_container.style.left = `${displaying_card_index * -540}px`;
+	const cardsArr = document.querySelectorAll(".card");
+	cardsArr.forEach((elem) => {
+		if (elem.dataset.number != (displaying_card_index+1)) {
+			elem.style.opacity = "0";
+		} else {
+			elem.style.opacity = 1;
+		}
+	});
+  card_number.innerText = `${displaying_card_index+1}/${cards.length}`;
+		makeCards(cards);
+}
+
 function clear_all() {
 	localStorage.clear();
 	// localStorage.removeItem("cards_arr");
 	cards = [];
 	card_number.innerText = "";
-  window.location.reload()
+	window.location.reload();
 }
 
 function addNew() {
@@ -47,7 +85,7 @@ function initCards() {
 		card_number.innerText = `1/${cards.length}`;
 		makeCards(cards);
 	}
-	console.log(cards);
+	console.log(cards[0]);
 	showCard(1);
 }
 
@@ -119,5 +157,5 @@ function makeCards(cardsArr) {
 
 function showCard(index) {
 	const cardNode = document.querySelector(`[data-number="${index}"]`);
-	console.log(cardNode);
+	console.log(cardNode.dataset.number);
 }
