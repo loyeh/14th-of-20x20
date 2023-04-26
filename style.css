@@ -67,6 +67,16 @@ button {
   height: 80%;
   /* border: 1px dotted green; */
   padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.card_container{
+  
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left:0;
+  top: 0;
 }
 .footage {
   font-size: 18px;
@@ -124,8 +134,9 @@ button {
 .close {
   text-align: left;
 }
-.card {
-  height: 100%;
+#card {
+  height: 320px;
+  width:500px ;
   box-shadow: 0px 0px 20px gray;
   display: flex;
   align-items: center;
