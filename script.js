@@ -26,6 +26,7 @@ function clear_all() {
 	// localStorage.removeItem("cards_arr");
 	cards = [];
 	card_number.innerText = "";
+  window.location.reload()
 }
 
 function addNew() {
