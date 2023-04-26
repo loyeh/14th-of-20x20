@@ -115,6 +115,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 .new div {
 	font-size: 14px;
@@ -122,11 +123,14 @@ button {
 	margin: 10px;
 }
 .new form {
-	display: flex;
-	flex-direction: column;
+	/* display: flex; */
+	/* flex-direction: column; */
+	width: 500px;
+	text-align: left;
 }
 .new input {
 	padding: 10px 10px 20px 10px;
+	width: 100%;
 }
 .add {
 	background-color: white;
@@ -140,6 +144,7 @@ button {
 .close {
 	text-align: left;
 }
+
 .card {
 	height: 320px;
 	width: 500px;
@@ -151,6 +156,11 @@ button {
 	/* animation: flip 2s ease-in-out ; */
 	box-shadow: 0px 0px 20px gray;
 	transition: 1s ease-in-out;
+	background-color: transparent;
+	z-index: 10;
+}
+[data-number=1]{
+	opacity: 1;
 }
 .card.annimated {
 	animation: flip 0.5s ease-in-out;
